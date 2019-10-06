@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Building layouts'),
         ),
-        body: myLayoutWidgetContainer(),
+        body: myRowExpandedWidget(),
       ),
     );
   }
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 
   // layout widget combine with padding widget
   Widget myLayoutWidgetCombineWithPadding() {
-    return Padding(
+    return Padding( 
       // all side
       // padding: EdgeInsets.all(16.0),
       // every side is different value 
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
   Widget myLayoutWidgetCenter() {
     return Center(
       child: Text('Irfan sedang ada ditengah layar', 
-      style: TextStyle(
+        style: TextStyle(
           fontSize: 24.0
         )
       )
@@ -92,4 +92,40 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+
+  // simple row widget
+  Widget myRowWidget() {
+    return Row(
+        children: [
+          Icon(Icons.home),
+          Icon(Icons.home),
+          Icon(Icons.home),
+          Icon(Icons.home),
+        ],
+      );
+    }
+
+    // simple column widget
+    Widget myColumnWidget() {
+      return Column(
+        children: [
+          Icon(Icons.ac_unit),
+          Icon(Icons.access_alarm),
+          Icon(Icons.wifi),
+          Icon(Icons.web)
+        ],
+      );
+    }
+
+    // row expand with expanded widget
+    Widget myRowExpandedWidget() {
+      return Row(
+        children: [
+          Expanded(child: Icon(Icons.account_balance)),
+          Expanded(child: Icon(Icons.account_circle)),
+          Expanded(child: Icon(Icons.adb)),
+          Expanded(child: Icon(Icons.airline_seat_flat))
+        ],
+      );
+    }
 }
