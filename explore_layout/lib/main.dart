@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Building layouts'),
         ),
-        body: myRowExpandedWidget(),
+        body: myLayoutWidgetCombineWithPadding(),
       ),
     );
   }
